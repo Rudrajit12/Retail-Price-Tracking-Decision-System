@@ -1,0 +1,8 @@
+pandas
+requests
+beautifulsoup4
+playwright
+gspread
+google-auth
+numpy
+google-auth-oauthlib

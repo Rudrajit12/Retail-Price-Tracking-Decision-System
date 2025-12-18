@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Environment / secrets
+service_account.json
+.env
+
+# Generated data
+price_log.csv
+price_comparison_results.csv
+products_master.csv
+
+# OS
+.DS_Store
+Thumbs.db
