@@ -52,6 +52,6 @@ def fetch_products_from_gsheets(
     # Save locally as CSV for downstream steps
     df.to_csv(output_csv, index=False)
 
-    print(f"Products fetched from Google Sheets → {output_csv}")
+    print(f"Products fetched from Google Sheets: {output_csv}")
 
     return df
