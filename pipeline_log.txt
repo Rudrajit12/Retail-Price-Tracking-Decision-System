@@ -3,23 +3,62 @@
 
 Fetching products from Google Sheets...
 
-Traceback (most recent call last):
-  File "C:\Users\Rudra\Documents\Retail Price Tracking\main.py", line 55, in <module>
-    main()
-    ~~~~^^
-  File "C:\Users\Rudra\Documents\Retail Price Tracking\main.py", line 30, in main
-    fetch_products_from_gsheets(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        spreadsheet_id=GOOGLE_SHEET_ID,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        service_account_file=SERVICE_ACCOUNT_FILE
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "C:\Users\Rudra\Documents\Retail Price Tracking\fetch_products_gsheets.py", line 55, in fetch_products_from_gsheets
-    print(f"Products fetched from Google Sheets \u2192 {output_csv}")
-    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Rudra\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
-    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
-           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 36: character maps to <undefined>
+Products fetched from Google Sheets: products_master.csv
+
+ Scraping product prices and stock status...
+
+Running scrapers...
+Scraping: Apple Macbook Air M4 | Flipkart
+Scraping: Apple Macbook Air M4 | Amazon
+Scraping: Apple Macbook Air M4 | Reliance Digital
+Scraping: Apple iPhone 17 Pro | Flipkart
+Scraping: Apple iPhone 17 Pro | Amazon
+Scraping: Apple iPhone 17 Pro | Reliance Digital
+Scraping: Apple iPhone 16 | Flipkart
+Scraping: Apple iPhone 16 | Amazon
+Scraping: Apple iPhone 16 | Reliance Digital
+Scraping: Google Pixel 10 Pro | Flipkart
+Scraping: Google Pixel 10 Pro | Amazon
+Scraping: Google Pixel 10 Pro | Reliance Digital
+Scraping: Lenovo Yoga Slim 7 | Flipkart
+Scraping: Lenovo Yoga Slim 7 | Amazon
+Scraping: Lenovo Yoga Slim 7 | Reliance Digital
+Scraping: OnePlus 15 | Flipkart
+Scraping: OnePlus 15 | Amazon
+Scraping: OnePlus 15 | Reliance Digital
+Scraping: Samsung Galaxy S24 | Flipkart
+Scraping: Samsung Galaxy S24 | Amazon
+Scraping: Samsung Galaxy S24 | Reliance Digital
+Scraping: Vivo X300 Pro | Flipkart
+Scraping: Vivo X300 Pro | Amazon
+Scraping: Vivo X300 Pro | Reliance Digital
+Scraping: OnePlus Nord Buds 3 Pro | Flipkart
+Scraping: OnePlus Nord Buds 3 Pro | Amazon
+Scraping: OnePlus Nord Buds 3 Pro | Reliance Digital
+Scraping: Apple AirPods 4 | Flipkart
+Scraping: Apple AirPods 4 | Amazon
+Scraping: Apple AirPods 4 | Reliance Digital
+
+ Scraping complete! Saved to price_log.csv
+
+
+ Comparing Reliance Digital Prices vs Market...
+
+Running Reliance Digital price comparison...
+
+ Pivot columns: ['product_id', 'product_name', 'Amazon', 'Flipkart', 'Reliance Digital']
+Reliance Digital comparison complete!
+
+Saved to price_comparison_results.csv
+
+
+ Uploading outputs to Google Sheets...
+
+Uploaded data to tab: products
+Uploaded data to tab: price_log
+Uploaded data to tab: price_comparison_results
+
+ All outputs uploaded to Google Sheets successfully!
+
+ Pipeline executed successfully!
+
