@@ -1,7 +1,7 @@
 import pandas as pd
 
 def run_comparison():
-    print("📊 Running Reliance Digital price comparison...")
+    print("Running Reliance Digital price comparison...")
 
     df = pd.read_csv("price_log.csv")
 
@@ -15,7 +15,7 @@ def run_comparison():
         aggfunc="first"
     ).reset_index()
 
-    print("\n🔎 Pivot columns:", price_pivot.columns.tolist())
+    print("\n Pivot columns:", price_pivot.columns.tolist())
 
     # Ensure all expected columns exist
     for col in ["Reliance Digital", "Amazon", "Flipkart"]:
@@ -135,5 +135,5 @@ def run_comparison():
     # -------------------------------
     final.to_csv("price_comparison_results.csv", index=False)
 
-    print("✅ Reliance Digital comparison complete!")
-    print("📁 Saved to price_comparison_results.csv\n")
+    print("Reliance Digital comparison complete!\n")
+    print("Saved to price_comparison_results.csv\n")

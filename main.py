@@ -23,31 +23,31 @@ def main():
     4. Upload results back to Google Sheets
     """
 
-    print("\n🚀 Starting Reliance Digital Pricing Intelligence Pipeline\n")
+    print("\n Starting Reliance Digital Pricing Intelligence Pipeline\n")
 
     # Step 1: Fetch product URLs & metadata
-    print("⏳ Fetching products from Google Sheets...\n")
+    print("Fetching products from Google Sheets...\n")
     fetch_products_from_gsheets(
         spreadsheet_id=GOOGLE_SHEET_ID,
         service_account_file=SERVICE_ACCOUNT_FILE
     )
 
     # Step 2: Scrape prices and stock status
-    print("\n⏳ Scraping product prices and stock status...\n")
+    print("\n Scraping product prices and stock status...\n")
     run_scraper()
 
     # Step 3: Compare Reliance pricing vs market
-    print("\n⏳ Comparing Reliance Digital Prices vs Market...\n")
+    print("\n Comparing Reliance Digital Prices vs Market...\n")
     run_comparison()
 
     # Step 4: Publish outputs to Google Sheets
-    print("\n⏳ Uploading outputs to Google Sheets...\n")
+    print("\n Uploading outputs to Google Sheets...\n")
     upload_outputs_to_gsheets(
         spreadsheet_id=GOOGLE_SHEET_ID,
         service_account_file=SERVICE_ACCOUNT_FILE
     )
 
-    print("\n✅ Pipeline executed successfully!\n")
+    print("\n Pipeline executed successfully!\n")
 
 
 # Entry point

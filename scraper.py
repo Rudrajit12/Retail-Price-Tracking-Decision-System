@@ -110,7 +110,7 @@ def scrape_flipkart(url):
         return price, stock
 
     except Exception as e:
-        print(f"❌ Flipkart Playwright error: {e}")
+        print(f"Flipkart Playwright error: {e}")
         return None, "Error"
 
 # ---------------- RELIANCE DIGITAL SCRAPER ----------------
@@ -153,19 +153,19 @@ def scrape_reliance(url):
         return price, stock
 
     except Exception as e:
-        print("❌ Reliance Digital scraper error:", e)
+        print("Reliance Digital scraper error:", e)
         return None, "Error"
 
 
 # ---------------- MAIN SCRAPER FUNCTION ----------------
 def run_scraper():
-    print("⏳ Running scrapers...")
+    print("Running scrapers...")
     df = pd.read_csv("products_master.csv")
 
     results = []
 
     for _, row in df.iterrows():
-        print(f"➡ Scraping: {row['product_name']} | {row['site']}")
+        print(f"Scraping: {row['product_name']} | {row['site']}")
         
         try:
             if row["site"].lower() == "amazon":
@@ -180,7 +180,7 @@ def run_scraper():
                 price, stock = None, "Unsupported"
 
         except Exception as e:
-            print(f"❌ Scraping failed for {row['site']} | {row['product_name']}: {e}")
+            print(f"Scraping failed for {row['site']} | {row['product_name']}: {e}")
             price, stock = None, "Error"
 
         results.append([
@@ -200,4 +200,4 @@ def run_scraper():
     ])
 
     log_df.to_csv("price_log.csv", index=False)
-    print("\n✅ Scraping complete! Saved to price_log.csv\n")
+    print("\n Scraping complete! Saved to price_log.csv\n")

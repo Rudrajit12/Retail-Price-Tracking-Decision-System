@@ -47,11 +47,11 @@ def fetch_products_from_gsheets(
 
     # Safety check: products tab should not be empty
     if df.empty:
-        raise ValueError("❌ Products tab is empty in Google Sheets")
+        raise ValueError("Products tab is empty in Google Sheets")
 
     # Save locally as CSV for downstream steps
     df.to_csv(output_csv, index=False)
 
-    print(f"✅ Products fetched from Google Sheets → {output_csv}")
+    print(f"Products fetched from Google Sheets → {output_csv}")
 
     return df

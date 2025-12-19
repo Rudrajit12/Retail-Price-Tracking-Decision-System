@@ -43,7 +43,7 @@ def upload_csv_to_sheet(sheet, df, tab_name):
     # Upload to Google Sheets
     worksheet.update(rows)
 
-    print(f"✅ Uploaded data to tab: {tab_name}")
+    print(f"Uploaded data to tab: {tab_name}")
 
 
 def upload_outputs_to_gsheets(
@@ -91,4 +91,4 @@ def upload_outputs_to_gsheets(
     upload_csv_to_sheet(sheet, df_log, "price_log")
     upload_csv_to_sheet(sheet, df_comp, "price_comparison_results")
 
-    print("\n🎉 All outputs uploaded to Google Sheets successfully!")
+    print("\n All outputs uploaded to Google Sheets successfully!")
